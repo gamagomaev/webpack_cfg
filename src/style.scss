@@ -1,3 +1,7 @@
+@import '~normalize.css';
+@import '../src/assets/fonts/fonts.css';
+@import './app/app.scss';
+
 html,
 body {
   box-sizing: border-box;

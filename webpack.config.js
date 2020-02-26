@@ -68,7 +68,7 @@ const jsLoaders = () => {
 const plugins = () => {
   const basePlugins = [
     new HTMLWebpackPlugin({
-      template: "./index.html",
+      template: "./index.pug",
       minify: {
         collapseWhitespace: isProd
       }
@@ -88,7 +88,7 @@ module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: {
-    main: ["@babel/polyfill", "./index.js"]
+    main: ["@babel/polyfill", "./index.ts"]
   },
   output: {
     filename: filename("js"),
@@ -110,6 +110,10 @@ module.exports = {
   plugins: plugins(),
   module: {
     rules: [
+      {
+        test: /\.pug$/,
+        use: ['pug-loader']
+      },
       {
         test: /\.css$/,
         use: cssLoaders()
