@@ -2,7 +2,7 @@ import * as $ from 'jquery';
 import { ClickNumber } from "../../interfaces/modules.interface";
 
 export class ClickCounter implements ClickNumber {
-  clickNumber: number;
+  clickNumber: number = 0;
 
   start(): void {
     this.clickNumber = +$('.click-number').text();
