@@ -1,0 +1,27 @@
+$appWidth: 100%;
+$appHeight: 100vh;
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $appWidth;
+  height: $appHeight;
+  background-color: rgb(61, 61, 61);
+  font-family: "Lato-Regular", sans-serif;
+  color: #c0c0c0;
+  cursor: default;
+  user-select: none;
+
+  .click-counter {
+    display: flex;
+    flex-wrap: nowrap;
+    width: $appWidth * 0.4;
+    justify-content: center;
+    color: #c0c0c0;
+
+    .click-number {
+      margin: 0 0 0 4px;
+    }
+  }
+}
