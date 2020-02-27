@@ -1,7 +1,7 @@
 
 module.exports = function (config) {
   process.env.BABEL_ENV = 'karma';
-  const patternPath = 'src/**/*.spec.js';
+  const patternPath = 'src/tests/**/*.spec.js';
   config.set({
     client: {
       clearContext: false,

@@ -102,6 +102,7 @@ module.exports = {
       "@styles": path.resolve(__dirname, "src/styles")
     }
   },
+  devtool: 'source-map',
   optimization: optimization(),
   devServer: {
     port: 4200,
