@@ -3,10 +3,12 @@
   $fontColor: #c0c0c0;
   display: flex;
   flex-wrap: nowrap;
-  width: 40%;
+  align-items: center;
+  box-sizing: border-box;
   justify-content: center;
-  color: #c0c0c0;
-  padding: 25px 0;
+  color: $bgColor;
+  padding: 25px;
+  opacity: 0.3;
   border: 1px solid #c0c0c0 {
     radius: 5px;
   }
@@ -15,8 +17,14 @@
   &:hover {
     background-color: $fontColor;
     color: $bgColor;
+    opacity: 0.7;
   }
-  .click-number {
-    margin: 0 0 0 4px;
+  &:hover > .label .click-number{
+    color: $bgColor;
+    opacity: 0.7;
+  }
+
+  .label {
+    margin-right: 4px;
   }
 }

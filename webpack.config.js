@@ -5,7 +5,7 @@ const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plug
 const path = require("path");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
-
+const webpack = require('webpack');
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
 
@@ -77,6 +77,12 @@ const plugins = () => {
     new MiniCssExtractPlugin({
       filename: filename("css")
     }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      "root.jQuery": "jquery"
+    })
   ];
   if (isProd) {
     basePlugins.push(new BundleAnalyzerPlugin());
