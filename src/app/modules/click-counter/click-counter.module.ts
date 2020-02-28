@@ -1,5 +1,6 @@
 import { ClickNumber } from "../../interfaces/modules.interface";
-import Velocity from 'velocity-animate';
+require('velocity-animate');
+//import Velocity from 'velocity-animate';
 export class ClickCounter implements ClickNumber {
   clickNumber: number;
   countContainer: JQuery<HTMLElement>;
@@ -34,14 +35,16 @@ export class ClickCounter implements ClickNumber {
   }
 
   animate() {
-    let c: HTMLElement = document.querySelector('.click-counter');
+    let c: JQuery<HTMLElement> = $('.click-counter');
 
-    Velocity(c, {
-      width: c.offsetWidth * 1.1,
-      height: c.offsetHeight * 1.1
+    (<any>c).velocity({
+      width: c.innerWidth() * 1.1,
+      height: c.innerHeight() * 1.1
     }, {
-      duration: 150, loop: 1
+      duration: 150,
+      loop: 1
     })
+
 
   }
 }
