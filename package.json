@@ -52,7 +52,7 @@
     "jasmine-core": "^3.5.0",
     "jasmine_dom_matchers": "^1.4.0",
     "jquery": "^3.4.1",
-    "karma": "^4.4.1",
+    "karma": "^6.3.16",
     "karma-chrome-launcher": "^3.1.0",
     "karma-jasmine": "^3.1.1",
     "karma-jasmine-html-reporter": "^1.5.2",
